@@ -38,6 +38,12 @@ Original code:
     - ensemble.py -- runs the GPT ensemble where the training is separated by subtype. Takes in a single subtype and the number of peptides to be generated, as well as the opportunity to manually dictate the inclusion threshold. If the inclusion threshold is not manually dictated, the threshold will be set to the optimized threshold for the 
                      associated subtype, per the publication. 
 
+To repeat the case study in the manuscript, execute the following command:
+
+python ensemble.py
+
+and then follow the instructions for data minimization outlined in the case study. 
+
 All source code modifications and original code were produced by Hannah Hargrove
 
 Contact: X. Frank Zhang (frank.zhang@umass.edu)
