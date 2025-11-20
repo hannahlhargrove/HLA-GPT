@@ -37,8 +37,6 @@ Modifications to code sources:
 Original code:
     - ensemble.py -- runs the GPT ensemble where the training is separated by subtype. Takes in a single subtype and the number of peptides to be generated, as well as the opportunity to manually dictate the inclusion threshold. If the inclusion threshold is not manually dictated, the threshold will be set to the optimized threshold for the 
                      associated subtype, per the publication. 
-    - single_model.py -- runs the generalized GPT ensemble where training is not separated by subtype. Takes in the number of peptides to be generated, as well as the opportunity to manually dictate the inclusion threshold. If the inclusion threshold is not manually dictated, the threshold will be set to the optimized threshold for the 
-                         generalized model (10nM), per the publication. 
 
 All source code modifications and original code were produced by Hannah Hargrove
 
