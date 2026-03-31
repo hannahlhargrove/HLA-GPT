@@ -164,6 +164,18 @@ if start_DeepMHC == "Y":
         print("Priming data...")
         get_DeepMHC_input("outputs/generated_peptides.csv",get_pseudos(subtype,a_list))
     else:
+        allele = ""
+        a_data = pd.read_csv("HLA_library.csv")
+        a_dict = dict()
+        a_list = []
+        for i in range(a_data.shape[0]):
+            name = a_data.iloc[i,0]
+            if subtype in name:
+                mhc = a_data.iloc[i,1]
+                a_dict[name]=mhc
+        for key in a_dict.keys:
+            a_list.append(key)
+            
         print("Priming data...")
         get_DeepMHC_input("outputs/generated_peptides.csv",get_pseudos(subtype))
     print("Loading DeepMHCII...")
