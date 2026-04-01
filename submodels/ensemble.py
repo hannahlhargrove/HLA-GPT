@@ -325,7 +325,7 @@ if start_DeepMHC == "Y":
         print("Beginning Cap-HLA-2.0 processing...")
         CapHLA.main(gpu=False,BA=True)
 
-if start_DeepMHC and start_Cap:
+if start_DeepMHC =="Y" and start_Cap =="Y":
     #Finalize outputs:
     print("Finalizing outputs...")
     if minimize_DeepMHC_output == "Y":
@@ -395,7 +395,7 @@ if start_DeepMHC and start_Cap:
             ps_scores = pd.concat([ps_scores,PepScore],axis=0,ignore_index=True)
     final = ps_scores.loc[:,~ps_scores.columns.duplicated()].copy()
 
-elif start_DeepMHC:
+elif start_DeepMHC=="Y":
     #Finalize outputs:
     print("Finalizing outputs...")
     deep = pd.read_csv("best_DeepMHCII_results.csv",index_col=0)
