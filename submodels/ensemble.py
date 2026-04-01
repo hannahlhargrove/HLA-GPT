@@ -173,7 +173,7 @@ if start_DeepMHC == "Y":
             if subtype in name:
                 mhc = a_data.iloc[i,1]
                 a_dict[name]=mhc
-        for key in a_dict.keys:
+        for key in list(a_dict.keys()):
             a_list.append(key)
             
         print("Priming data...")
